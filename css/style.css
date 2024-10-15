@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background-color: rgb(95, 128, 161);
+}
+
+section,footer{
+    padding: 55px 0;
+}
+
+h3{
+    font-size: 52px;
+}
+
+p{
+    color: white;
+}
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.btn{
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.btn:hover{
+    background-color: rgb(38, 90, 187);
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid rgb(255, 0, 64);
+    }
+    to{
+        outline: 15px solid rgb(121, 112, 112);
+    }
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px; 
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul a{
+    color: black;
+    margin: 0 24px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+nav ul a:not(.btn)::after{
+    content:"";
+    background-color: rgb(86, 170, 238);
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.4s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1{
+    font-size: 95px;
+    color: rgb(0, 0, 0);
+}
+
+.banner .banner-text p{
+    font-size: 25px;
+    color: black;
+    font-weight: lighter;
+    margin: 20px 0;
+}
+
+/* faca mais */
+.faca-mais .container{
+    display: flex;
+    align-items: center;
+}
+
+.faca-mais .faca-mais-text{
+    width: 50%;
+    padding: 0 40px;
+}
+
+.faca-mais .faca-mais-text h3{
+    font-size: 56px;
+}
+
+.faca-mais .faca-mais-text p{
+    margin: 5px 0 10px 0;
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.faca-mais .faca-mais-img{
+    width: 50%;
+}
+
+.faca-mais .faca-mais-img img{
+    width: 100%;
+}
+
+.depoimentos h3{
+    text-align: center;
+}
+
+.depoimentos p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.depoimentos .card-item{
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item img{
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+    
+}
+
+.depoimentos .card-item .nome-user{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: 0.3s;    
+}
+
+.depoimentos .card-item .depoimento-user{
+    font-size: 15px;
+    padding: 0 15px; 
+    transition: 0.3s;  
+}
+
+.depoimentos .card-item .estrelas{
+    margin: 15px 0;
+    border-top: 3px solid rgb(70, 125, 243);
+}
+
+.depoimentos .card-item .estrelas i{
+    color: white;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.depoimentos .card-item :hover{
+    background-color: #4f9cf9;
+    margin-top: -5px;
+}
+
+/*footer*/
+.footer{
+    background-color: #4f9cf9;
+    text-align: center;
+}
+
+.footer i{
+    font-size: 19px;
+    background-color: rgb(220, 225, 228);
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.footer p{
+    margin-top: 10px;
+    color: white;
+}
+
+
+
+/*Página sobre*/
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre .sobre-text{
+    border-radius: 7%;
+    width: 70%;
+    padding-right: 40%;
+}
+
+.sobre .sobre-text p{
+    margin: 18px 0;
+    color: black;
+}
+
+.sobre .sobre-img{
+    width: 40%;
+}
+
+.sobre .sobre-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+/*end Pádina sobre*/
+
+/*Página servicos*/
+.serviços h3{
+    text-align: center;
+}
+
+.serviços .serviços-img{
+    width: 40%;
+}
+
+.serviços .serviços-img img{
+    width: 100%;
+    border-radius: 10px;
+    left: 40px;
+    
+}
+/*dados*/
+.dados{
+    background-color: #4f9cf9;
+}
+
+.dados .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dados .dados-item{
+    text-align: center;
+    margin: 15px;
+    color: black;    
+}
+
+.dados .dados-item img{
+    background: #40b2f3;
+    border-radius: 14px;
+    padding: 10px;
+    margin: 15px;
+    width: 80px;    
+}
+
+.dados .dados-item p{
+   font-size: 18px;    
+}
+
+.dados .dados-item p strong{
+    font-size: 28px;   
+ }
+/*ende Página servicos*/
+
+/*Página Contactos*/
+.contactos-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.contactos-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color: #40b2f3;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+
+.contactos-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contactos-info .left-side div i{
+   font-size: 24px;
+   margin-right: 20px;
+   color: black;
+}
+
+.contactos-info .left-side div p{
+    font-size: 17px;
+    color: white;
+}
+
+.contactos-info .rigth-side{
+    width: 50%;
+}
+
+.contactos-info .rigth-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #40b2f3;
+    color: black;
+    font-weight: lighter;
+}
+
+.contactos-info .rigth-side input:focus,
+.contactos-info .rigth-side textarea:focus{
+    border-color: black;
+}
+
+.contactos-info .rigth-side textarea{
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+
+.contactos-info .rigth-side button{
+    border: none;
+}
+
+@media(max-width: 800px){
+    /*menu mobile*/
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #40b2f3;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0.0% at 100% 0);
+        transition: 0.7s;
+    }
+    .ul .open{
+        clip-path: circle(140.7% at 99% 0);
+     }
+
+    .ul a{
+       margin: 10px 0;
+       font-size: 16px;
+    }
+
+    nav .menu-icon{
+        display: block;
+    }
+
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 38px;
+    }
+
+/*Página principal responsiva*/
+    .faca-mais .faca-mais-text{
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .faca-mais .container{
+        flex-direction: column;
+    }
+
+    .faca-mais .faca-mais-text h3{
+        font-size: 48px;
+    }
+
+    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-img{
+        width: 100%;
+    }
+
+    /*banner responsiva*/
+    .banner .banner-text{
+        padding: 0;
+        margin: 80px;
+    }
+
+    .banner .banner-text h1{
+        font-size: 80px;   
+    }
+
+    /*Página sobre responsiva*/
+        .sobre .container{
+            flex-direction: column-reverse;
+        }
+
+        .sobre .sobre-text,
+        .sobre .sobre-img{
+            width: 100%; 
+        }
+
+        .sobre .sobre-text{
+            margin-top: 40px;  
+        }
+
+        .sobre .sobre-text p{
+            font-size: 17px;
+        }
+
+    /*Página contactos responsiva*/
+        .contactos .contactos-info{
+            flex-direction: column-reverse;  
+        }
+
+        .contactos-info .rigth-side,
+        .contactos-info .left-side{
+            width: 100%;
+        }
+
+        .contactos-info .rigth-side{
+            margin-bottom: 30px;  
+        }
+
+@media(max-width: 400px){
+        .banner .banner-text h1{
+            font-size: 50px;
+        }
+
+        .faca-mais .faca-mais-text{
+            font-size: 40px;
+        }
+    }
+}
